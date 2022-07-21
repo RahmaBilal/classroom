@@ -1,0 +1,33 @@
+// TODO: What does 'this' refer to?
+console.log(this); //targets the entire window
+
+// TODO: What does 'this' refer to?
+function helloThis() { 
+   console.log("Inside this function, this is " + this); //
+   }
+
+// TODO: What will this log? 
+var child = { 
+   age: 10,
+   ageTenYears: function() {
+       console.log(this.age + 10); //age
+   }
+};
+
+// TODO: What will this log? 
+var investor = {  
+  name: "Cash Saver",
+  investment: {
+    initialInvestment: 5000,
+    investmentGrowth: function() {
+      console.log(this.initialInvestment * 1.15) //7500
+    }
+   }   
+};
+
+// TODO: After commenting, check your results!
+helloThis(this);
+
+// TODO: After commenting, check your results!
+child.ageTenYears();
+investor.investment.investmentGrowth(this);
